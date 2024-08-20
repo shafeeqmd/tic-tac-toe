@@ -1,0 +1,123 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: green;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 20px 0;
+}
+
+h1.home-page-title {
+    font-size: 5em;
+    color: #fff;
+    margin-bottom: 20px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.home-page, .game-container {
+    text-align: center;
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.home-page {
+    transform: scale(1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Black shadow effect */
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0.9);
+    opacity: 0;
+    height: 100%;
+}
+
+.choose-marker, .choose-difficulty {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+.choose-marker {
+    background: #e1d15c;
+    max-width: 300px;
+}
+
+.choose-difficulty {
+    background: #e6ff6b;
+    max-width: 400px;
+}
+
+.choose-marker p, .choose-difficulty p {
+    font-size: 1.5em;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.marker-button, .difficulty-button, #restartButton, #goBackButton {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    margin: 10px;
+    background: linear-gradient(to bottom right, #ff8a00, #e52e71);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.marker-button:hover, .difficulty-button:hover, #restartButton:hover, #goBackButton:hover {
+    background: linear-gradient(to bottom right, #e52e71, #ff8a00);
+    transform: scale(1.1);
+}
+
+.game-board {
+    display: grid;
+    gap: 10px;
+    margin: 20px auto;
+    transition: opacity 1s;
+    justify-content: center;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top right, #fbfaf9, #6baeff);
+    border-radius: 10px;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, opacity 0.5s;
+    opacity: 0;
+}
+
+.cell:hover {
+    background: linear-gradient(to top right, #f9f8f8, #f5f4f3);
+    transform: scale(1.1);
+}
+
+.cell.clicked {
+    transform: scale(1.2);
+}
+
+.cell.visible {
+    opacity: 1;
+}
+h2 {
+    color: #fff;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5); /* Black shadow effect */
+}
+
